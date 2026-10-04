@@ -20,6 +20,7 @@ module.exports = {
         "CompareBinaryTrees",
         "DFSOnBST",
         "DFSGraphList",
+        "DijkstraList",
         "Trie",
         "BFSGraphMatrix",
         "Map",
