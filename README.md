@@ -1,96 +1,37 @@
-## Developed live on twitch
-[ThePrimeagen](https://twitch.tv/ThePrimeagen)
+# TypeScript Algorithms & Data Structures
 
-## Naming
-### Lig-Machine
-Lengthy Instrumentation Generating Massive Anticompetitive Computational Help for Intermediate Coders // n9
+[![Algorithm Tests](https://github.com/jooodie/kata-machine/actions/workflows/test.yml/badge.svg)](https://github.com/jooodie/kata-machine/actions/workflows/test.yml)
 
-### Ligmata
-Literal Improvement Gaining Master and Tutelage on Algorithms
-Let's Intelligently Generate Multiple Algorithm Training Assessments // permdaddy
+基於 [ThePrimeagen](https://github.com/ThePrimeagen) 的 `kata-machine` 架構，以 **TypeScript** 純手工（From Scratch）實作核心資料結構與經典演算法。
 
-### Sugma Nuts
-Studious Users Get Major Abilities. New Useful Training for Students
+專案整合 **GitHub Actions CI/CD** 自動化測試流程，針對各演算法實作進行邊界條件、指針操作與時間複雜度之單元測試驗證。
 
-### Ligma Farts
-Learn Intermediate Groundbreaking Massive Algorithms. Free Algorithm Research & Training System
+---
 
+## 🛠 技術棧與工具
 
-### If you have a suggestion
-make an issue and we will come up with the potential name.
+- **語言 (Language)**: TypeScript
+- **測試框架 (Testing)**: Jest
+- **持續整合 (CI/CD)**: GitHub Actions
 
-### WARNING
-I have just started to add algorithms, so the number of supported algorithms is
-limited at the moment, but will grow fairly quick.
+---
 
-### WARNING
-OUT OF DATE.  We have quite a few more.  need to update
-### Supported Algorithm
-* Insertion sort
-* Merge sort
-* QuickSort
-* Prim's MST (Adjacency List)
-* Dijkstra's Shortest Path (Adjacency List)
+## 📌 涵蓋核心主題 (Topics Covered)
 
-### Supported Data Structures
-* Singly linked list
-* Doubly linked list
-* Queue
-* Stack
-* Graph with Adjacency List
-* Graph with Adjacency Matrix (untested)
+- **搜尋與排序 (Searching & Sorting)**: Linear Search, Binary Search, Bubble Sort, Quick Sort, Two Crystal Balls Problem ($O(\sqrt{n})$)
+- **線性資料結構 (Linear Data Structures)**: Singly / Doubly Linked List, Stack, Queue, Dynamic Array
+- **樹與圖論 (Trees & Graphs)**: Binary Tree Traversals (Pre/In/Post Order), BFS, DFS, BST Operations, MinHeap, Dijkstra's Shortest Path
+- **進階演算法與系統設計 (Advanced & Design)**: LRU Cache, Maze Solver (Backtracking / Recursion), Trie
 
-### How It Works
+---
 
-Make sure you have [Node.js](https://nodejs.org/en/) and yarn installed: `npm install --global yarn`
+## 🧪 本地測試驗證
 
-clone the repo and install the dependencies
+本專案使用 Jest 進行嚴格的單元測試，可在本地端驗證演算法實作：
 
 ```bash
-yarn install
-```
+# 安裝相依套件
+npm install # 或 yarn install
 
-edit the `ligma.config.js` file
-```javascript
-module.exports = {
-    dsa: [
-        "InsertionSort",
-        "MergeSort",
-        "Queue",
-        "Stack",
-        "QuickSort",
-        "DijkstraList",
-        "PrimsList",
-    ],
-}
-```
-
-create a day of katas, this will use the list in the `ligma.config.js`.
-```bash
-yarn generate
-```
-
-this will progressively create folders named
-
-```
-src/day1
-src/day2
-...
-```
-
-`yarn generate` will also update the `tsconfig.json` and `jest.config` to point
-the latest `day` folder via tspaths.  This allows us to avoid updating anything
-for testing each day.
-
-#### Testing
-```
-yarn test
-```
-
-I have yet to create a testing strategy for next sets of algorithms, but we
-will get there when i cross that bridge.
-
-### Help wanted
-A simple way to specify test, thinking something like `tests.json` and `cat
-test.json 2> /dev/null` to specify the tests to run.  tests.json wouldn't be
-committed.
+# 執行演算法單元測試
+npm test
